@@ -28,5 +28,5 @@ local Notify = AkaliNotif.Notify;
 Notify({
 Description = "by CLEITI6966";
 Title = "load success";
-Duration = 5;
+Duration = 9;
 });
