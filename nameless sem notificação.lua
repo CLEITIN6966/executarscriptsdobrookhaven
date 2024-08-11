@@ -7,27 +7,7 @@
 ╰╯╱╰━┻╯╰┻┻┻┻━━┻━┻━━┻━━┻━━╯╰╯╱╰┻━━┻┻┻┻┻╯╰╯    |
 --]]
 
- -- Waits until game is loaded
- local game = game
- local GetService = game.GetService
- if (not game.IsLoaded(game)) then
-	 local Loaded = game.Loaded
-	 Loaded.Wait(Loaded);
-	 wait(1.5)
- end
- 
- -- Notification library
- local Notification = loadstring(game:HttpGet("https://raw.githubusercontent.com/FilteringEnabled/FE/main/notificationtest"))();
- local Notify = Notification.Notify;
-
- Notify({
-		 Description = "https://discord.gg/pnPVKKdpfd";
-		 Title = "Join the Discord Server!";
-		 Duration = 20;
-		 
-});
- 
- -- Custom file functions checker checker
+-- Custom file functions checker checker
  local CustomFunctionSupport = isfile and isfolder and writefile and readfile and listfiles
  local FileSupport = isfile and isfolder and writefile and readfile
  
