@@ -13,7 +13,7 @@ end
 
 -- URLs dos scripts remotos
 local scriptUrls = {
-    "https://raw.githubusercontent.com/CLEITIN6966/executarscriptsdobrookhaven/main/namelesssemnotificação.lua",
+    "https://raw.githubusercontent.com/FilteringEnabled/NamelessAdmin/main/Source",
     "https://raw.githubusercontent.com/REDzHUB/REDzHUB/main/REDzHUB",
     "https://raw.githubusercontent.com/CLEITIN6966/executarscriptsdobrookhaven/main/fly.lua"
 }
