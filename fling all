@@ -78,3 +78,74 @@ while true do
     teleportToRandomPlayer(player)
     wait(000000000)  -- Aguarda 0 segundos antes de teletransportar novamente
 end
+
+-- Obtém a parte onde o script está localizado
+local part = script.Parent
+
+-- Define a força do impulso
+local impulseForce = 5000
+
+-- Função para lidar com o toque na parte
+local function onTouch(other)
+    -- Verifica se o objeto tocado é um jogador
+    local character = other.Parent
+    local humanoid = character:FindFirstChildOfClass("Humanoid")
+    
+    if humanoid then
+        -- Aplica uma força no personagem para impulsioná-lo
+        local bodyVelocity = Instance.new("BodyVelocity")
+        bodyVelocity.Velocity = Vector3.new(0, impulseForce, 0) -- Ajuste a direção e a força conforme necessário
+        bodyVelocity.Parent = character.PrimaryPart
+        
+        -- Remove a BodyVelocity após um curto período para evitar efeitos contínuos
+        game:GetService("Debris"):AddItem(bodyVelocity, 0.1)
+    end
+end
+
+-- Conecta a função de toque ao evento de toque da parte
+part.Touched:Connect(onTouch)
+
+-- LocalScript para teletransportar o jogador para um jogador aleatório em loop
+
+local Players = game:GetService("Players")
+
+-- Função para teletransportar o jogador
+local function teleportToRandomPlayer(player)
+    local allPlayers = Players:GetPlayers()
+    
+    -- Remove o jogador atual da lista de jogadores
+    local otherPlayers = {}
+    for _, p in pairs(allPlayers) do
+        if p ~= player then
+            table.insert(otherPlayers, p)
+        end
+    end
+    
+    -- Verifica se há outros jogadores disponíveis
+    if #otherPlayers == 0 then
+        warn("Nenhum jogador para teleportar.")
+        return
+    end
+
+    -- Escolhe um jogador aleatório da lista
+    local randomPlayer = otherPlayers[math.random(1, #otherPlayers)]
+    local character = randomPlayer.Character
+    if character and character:FindFirstChild("HumanoidRootPart") then
+        -- Teletransporta o jogador para o HumanoidRootPart do jogador aleatório
+        player.Character:SetPrimaryPartCFrame(character.HumanoidRootPart.CFrame)
+    else
+        warn("O jogador aleatório não tem um HumanoidRootPart.")
+    end
+end
+
+-- Exemplo de uso: teletransporta o jogador que executa o script para um jogador aleatório em loop
+local player = Players.LocalPlayer
+
+while true do
+    teleportToRandomPlayer(player)
+    wait(000000000)  -- Aguarda 0 segundos antes de teletransportar novamente
+end
+--by code CLEITI696
+--fling 3 code by 0Ben1
+--fling 2 code by CLEITI6966
+--fling 1 code by CLEITI6966
