@@ -6,7 +6,7 @@ local character = player.Character or player.CharacterAdded:Wait()
 local humanoidRootPart = character:WaitForChild("HumanoidRootPart")
 
 -- Define a velocidade de rotação
-local rotationSpeed = 9999999999999999999999999999999999999999
+local rotationSpeed = 99999999999999999999999999999999999999999999
 
 -- Função para atualizar a rotação
 local function updateRotation()
