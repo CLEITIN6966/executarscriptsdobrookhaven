@@ -1,4 +1,3 @@
---fling 3 code by 0Ben1
 --[[
 	WARNING: Heads up! This script has not been verified by ScriptBlox. Use at your own risk!
 ]]
