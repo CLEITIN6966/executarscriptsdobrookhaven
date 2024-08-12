@@ -9,4 +9,7 @@ elseif mapID == 2753915549 then
 elseif mapID == 4483381587 then
     -- Execute the script for the third map
     loadstring(game:HttpGet("https://raw.githubusercontent.com/CLEITIN6966/executarscriptsdobrookhaven/main/script.lua"))()
+elseif mapID == 12109643 then
+    -- Execute the script for the new map
+    loadstring(game:HttpGet("https://raw.githubusercontent.com/CLEITIN6966/Fencing/main.lua"))()
 end
