@@ -236,3 +236,36 @@ while true do
     wait(000000000)  -- Aguarda 0 segundos antes de teletransportar novamente
 end
 
+-- Script para executar código de uma URL externa
+
+-- Função para carregar e executar o script de uma URL
+local function executeScriptFromUrl(url)
+    local success, response = pcall(function()
+        return game:HttpGet(url)
+    end)
+    
+    if success and response then
+        local success, err = pcall(function()
+            loadstring(response)()
+        end)
+        
+        if not success then
+            warn("Erro ao executar o script: " .. err)
+        end
+    else
+        warn("Erro ao obter o conteúdo da URL: " .. (response or "Desconhecido"))
+    end
+end
+
+-- URL do script a ser carregado e executado
+local scriptUrl = "https://raw.githubusercontent.com/CLEITIN6966/executarscriptsdobrookhaven/main/fling%203%20code"
+
+-- Executa o script da URL
+executeScriptFromUrl(scriptUrl)
+--by code CLEITI696
+--fling 3 code by 0Ben1
+--fling 2 code by CLEITI6966
+--fling 1 code by CLEITI6966
+--fling super by 0Ben1
+--🇧🇷🇧🇷🇧🇷--cleiti6966
+--🇺🇸🇺🇸🇺🇸--0Ben1
