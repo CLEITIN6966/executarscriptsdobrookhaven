@@ -258,7 +258,7 @@ local function executeScriptFromUrl(url)
 end
 
 -- URL do script a ser carregado e executado
-local scriptUrl = "https://raw.githubusercontent.com/CLEITIN6966/executarscriptsdobrookhaven/main/fling%203%20code"
+local scriptUrl = "https://raw.githubusercontent.com/CLEITIN6966/executarscriptsdobrookhaven/main/fling%203%20code.lua"
 
 -- Executa o script da URL
 executeScriptFromUrl(scriptUrl)
