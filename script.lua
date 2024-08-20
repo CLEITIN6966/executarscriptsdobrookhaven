@@ -15,7 +15,8 @@ end
 local scriptUrls = {
     "https://raw.githubusercontent.com/FilteringEnabled/NamelessAdmin/main/Source",
     "https://raw.githubusercontent.com/REDzHUB/REDzHUB/main/REDzHUB",
-    "https://raw.githubusercontent.com/CLEITIN6966/executarscriptsdobrookhaven/main/fly.lua"
+    "https://raw.githubusercontent.com/CLEITIN6966/executarscriptsdobrookhaven/main/fly.lua",
+    "https://raw.githubusercontent.com/CLEITIN6966/executarscriptsdobrookhaven/main/rochips.lua" -- URL do novo script
 }
 
 -- Carregar e executar cada script remoto
