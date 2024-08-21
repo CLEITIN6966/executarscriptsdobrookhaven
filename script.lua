@@ -24,8 +24,8 @@ for _, url in ipairs(scriptUrls) do
     loadRemoteScript(url)
 end
 
-local AkaliNotif = loadstring(game:HttpGet("https://raw.githubusercontent.com/CLEITIN6966/executarscriptsdobrookhaven/main/AkaliNotif.lua"))();
-local Notify = AkaliNotif.Notify;
+local notificação = loadstring(game:HttpGet("https://raw.githubusercontent.com/CLEITIN6966/executarscriptsdobrookhaven/main/notificação.lua"))();
+local Notify = notificação.Notify;
 Notify({
 Description = "by CLEITI6966";
 Title = "load success";
