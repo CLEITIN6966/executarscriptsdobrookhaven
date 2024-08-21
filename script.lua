@@ -16,18 +16,19 @@ local scriptUrls = {
     "https://raw.githubusercontent.com/FilteringEnabled/NamelessAdmin/main/Source",
     "https://raw.githubusercontent.com/REDzHUB/REDzHUB/main/REDzHUB",
     "https://raw.githubusercontent.com/CLEITIN6966/executarscriptsdobrookhaven/main/fly.lua",
-    "https://raw.githubusercontent.com/CLEITIN6966/executarscriptsdobrookhaven/main/rochips.lua" -- URL do novo script
-}
-
+    "https://raw.githubusercontent.com/CLEITIN6966/executarscriptsdobrookhaven/main/rochips.lua" -- URL do no
 -- Carregar e executar cada script remoto
 for _, url in ipairs(scriptUrls) do
     loadRemoteScript(url)
 end
 
-local notificação = loadstring(game:HttpGet("https://raw.githubusercontent.com/CLEITIN6966/executarscriptsdobrookhaven/main/notificação.lua"))();
-local Notify = notificação.Notify;
-Notify({
-Description = "by CLEITI6966";
-Title = "load success";
-Duration = 9;
+-- Notification library
+ local Notification = loadstring(game:HttpGet("https://raw.githubusercontent.com/CLEITIN6966/executarscriptsdobrookhaven/main/notificação.lua"))();
+ local Notify = Notification.Notify;
+
+ Notify({
+		 Description = "by CLEITI6966";
+		 Title = "load success";
+		 Duration = 20;
+		 
 });
