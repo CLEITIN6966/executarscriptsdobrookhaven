@@ -137,7 +137,7 @@ nowe = false
 
 game:GetService("StarterGui"):SetCore("SendNotification", { 
 Title = "CLEITI6966";
-Text = "By me_ozone and Quandale The Dinglish XII#3550";
+Text = "by CLEITI6966";
 Icon = "rbxthumb://type=Asset&id=5107182114&w=150&h=150"})
 Duration = 5; 
 
